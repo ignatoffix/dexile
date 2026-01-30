@@ -1,0 +1,162 @@
+/* Hz */
+:root {
+    --dark: #19191B;
+    --gray: #8F8F9E;
+    --orange: #FF7143;
+    --yellow: #ffbb00;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Unbounded', sans-serif;
+}
+
+/* Hz */
+
+/* Header */
+
+.header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.header_container, .header_container {
+    max-width: 1069px;
+    margin-inline: auto;
+}
+.header_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_nav_links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__list {
+    display: flex;
+    list-style: none;
+    gap: 49px;
+}
+
+ul {
+    list-style: none;
+}
+
+.header__list-link {
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: -0.47px;
+    color: var(--gray);
+    transition: color 500ms;
+}
+
+.header__list-link.active {
+    color: var(--dark);
+    border-bottom: 2px solid rgb(255, 81, 0);
+    padding-bottom: 5px;
+}
+
+.header__list-link:hover {
+    color: var(--dark);
+}
+
+a {
+    text-decoration: none;
+} 
+
+.header__button, .hero__button {
+    font-weight: normal;
+    font-size: 17px;
+    letter-spacing: -0.53px;
+    color: white;
+    padding: 19px 59px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.header__button {
+    background-color: var(--orange);
+}
+
+.header__button:hover, .hero__button:hover {
+    opacity: 90%;
+    transform: scale(0.98);
+}
+/* Header */
+
+/* Main */
+
+.hero {
+    padding-block: 70px;
+}
+
+.hero__container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; 
+    gap: 60px;
+}
+
+.hero__content {
+    max-width: 423px;
+    padding-block : 92px;
+}
+
+.hero__image {
+    position: static;
+    top: 0;
+    right: 320px;
+    pointer-events: none; 
+}
+
+.hero__title {
+    font-weight: 700;
+    font-size: 64px;
+    letter-spacing: -2.5px;
+    line-height: 77px;
+    color: var(--dark);
+}
+
+.hero__desc {
+    font-family: 'Jost', sans-serif;
+    line-height: 1.6;
+    font-size: 20px;
+    letter-spacing: -0.63px;
+    color: var(--gray);
+    margin-top: 30px;
+}
+
+.hero__buttons {
+    margin-top: 50px;
+    display: flex;
+    gap: 40px;
+}
+
+.hero__button {
+    background-color: var(--orange);
+}
+
+
+.hero__scroll {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e7e7e7;
+    border-radius: 100px;
+
+}
+
+/* Main */

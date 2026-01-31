@@ -15,4 +15,7 @@
     padding: 19px 150px;
     border-radius: 10px;
     transition: 0.3s;
+    outline: none;
+    border: none;
 }
+

@@ -1,0 +1,67 @@
+:root {
+    --dark: #19191B;
+    --gray: #8F8F9E;
+    --orange: #FF7143;
+    --yellow: #ffbb00;
+}
+
+.header__button {
+    font-weight: normal;
+    font-size: 17px;
+    letter-spacing: -0.53px;
+    color: white;
+    padding: 20px 49px;
+    border-radius: 10px;
+    transition: 0.3s;
+    outline: none;
+    border: none;
+}
+
+#steave {
+    position: relative;
+    top: 150px; 
+    right: 300px;
+    z-index: 1; 
+    max-width: 5000px;
+    pointer-events: none; 
+}
+
+.change-skin {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 17px;
+    letter-spacing: -0.53px;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+    background-color: var(--orange);
+    margin-top: 10px;
+    outline: none;
+    border: none;
+}
+
+.change-skin{
+    position: absolute;
+    top: 350px;
+    right: 1px;
+}
+
+.hero__button_bank, .hero__button_logout, .hero__button_security {
+    font-weight: normal;
+    font-size: 17px;
+    letter-spacing: -0.53px;
+    color: white;
+    padding: 19px 66px;
+    border-radius: 10px;
+    transition: 0.3s;
+    background-color: var(--orange);
+    margin-top: 10px;
+    outline: none;
+    border: none;
+}
+
+.profile-info__item{
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: var(--gray);
+}

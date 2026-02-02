@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dexile</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/the_passage.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="icon" href="/img/favicon.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class ="header_container"> 
+            <nav class ="header_nav">
+                <a href="index.html">
+                <img src="/img/favicon.svg" alt="Dexile Logo" class="logo" width="64" height="64">
+                </a>
+                <ul class="header__list">
+                    <li class="header__list-item"><a class="header__list-link" href="index.html">Главная страница</a></li>
+                    <li class="header__list-item"><a class="header__list-link" href="rules.html">Правила</a></li>
+                    <li class="header__list-item"><a class="header__list-link active" href="the_passage.html">Проходка</a></li>
+                </ul>
+                <a class="header__button" href="register.html">Начать играть!</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+           <div class="hero__container">
+               <div class="hero__content">
+                    <div class="hero__text">
+                        <h1 class="hero__title">Купите проходку и начните играть на сервере Dexile!</h1>
+                        <p class="hero__desc">
+                            Добро пожаловать! Здесь вы можете приобрести проходку на наш сервер и присоединиться к уникальному игровому обществу на сервере Dexile. Просто нажмите на кнопку ниже, чтобы начать процесс покупки. Мы поддерживаем удобные способы оплаты: ЮMoney, СПБ, Сбербанк и Тинькофф Банк. После оплаты вы получите доступ ко всем возможностям сервера и сможете начать своё приключение!
+                        </p></p>
+                    </div>
+                    <div class="hero__buttons">
+                        <button class="hero__button" id="buyButton">Купить!</button>
+                    </div>
+               </div>
+               <img class="hero__image" src="img/the_passage-img.png" alt="man">
+              </div>
+        </section>
+    </main>
+        <div id="purchaseModal" class="modal">   
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h2 class="modal-title">Покупка проходки</h2>
+            <p class="modal-description">
+                Выберите удобный способ оплаты. После оплаты вы получите доступ к серверу в течение нескольких минут.
+            </p>
+            
+            <div class="price-info">
+                <div class="price">499 ₽</div>
+            </div>
+
+            <div class="payment-methods">
+                <button class="payment-btn" onclick="selectPayment('yoomoney')">ЮMoney</button>
+                <button class="payment-btn" onclick="selectPayment('spb')">СПБ</button>
+                <button class="payment-btn" onclick="selectPayment('sberbank')">Сбербанк</button>
+                <button class="payment-btn" onclick="selectPayment('tinkoff')">Тинькофф</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dexile — Профиль</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/security.css">
+    <link rel="icon" href="/img/favicon.svg" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+    <div class="header_container">
+        <nav class="header_nav">
+            <a href="index.html">
+                <img src="/img/favicon.svg" alt="Dexile Logo" class="logo" width="64" height="64">
+            </a>
+
+            <ul class="header__list">
+                <li><a class="header__list-link" href="index.html">Главная</a></li>
+                <li><a class="header__list-link" href="rules.html">Правила</a></li>
+                <li><a class="header__list-link" href="the_passage.html">Проходка</a></li>
+            </ul>
+
+            <a class="header__button" href="profile.html">
+                <img src="/img/profile.png" alt="Профиль" width="24" height="24">
+            </a>
+        </nav>
+    </div>
+</header>
+
+<!-- ===== MAIN ===== -->
+<main>
+    <section class="hero">
+        <div class="hero__container">
+
+            <!-- ===== ЛЕВАЯ ЧАСТЬ ===== -->
+            <div class="hero__content">
+                <h1 class="hero__title">Профиль</h1>
+                <p class="hero__desc">
+                    Это ваш личный профиль на сервере. Здесь отображается информация об аккаунте.
+                </p>
+
+                <div class="profile-info">
+                    <h2 class="profile-info__title">Информация об аккаунте</h2>
+
+                    <div class="profile-info__item">
+                        <span>Логин:</span>
+                        <span id="usernameDisplay">—</span>
+                    </div>
+
+                    <div class="profile-info__item">
+                        <span>Дата регистрации:</span>
+                        <span id="createdAtDisplay">—</span>
+                    </div>
+
+                    <div class="profile-info__item">
+                        <span>Minecraft ник:</span>
+                        <span id="minecraftNickDisplay">Не привязан</span>
+                    </div>
+                </div>
+
+                <div class="hero__buttons">
+                    <a class="hero__button_bank" href="bank.html">Банк</a>
+                    <a class="hero__button_security" href="#" id="openSecurityModal">Безопасность</a>
+                    <a class="hero__button_logout" href="#" id="logoutBtn">Выйти</a>
+                </div>
+            </div>
+
+            <!-- ===== ПРАВАЯ ЧАСТЬ (СКИН) ===== -->
+            <div class="profile-skin">
+                <h2 class="profile-skin__title">Ваш скин</h2>
+
+                <canvas id="skinCanvas" width="160" height="320"></canvas>
+
+                <label class="change-skin">
+                    Сменить скин
+                    <input type="file" id="skinInput" accept="image/png" hidden>
+                </label>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<!-- ===== MODAL: БЕЗОПАСНОСТЬ ===== -->
+<div class="modal" id="securityModal">
+    <div class="modal-content">
+
+        <button class="modal-close" id="closeSecurityModal">&times;</button>
+
+        <h2 class="modal-title">Безопасность аккаунта</h2>
+        <p class="modal-description">
+            Управление паролем и защитой аккаунта
+        </p>
+
+        <div class="security-section">
+            <h3>Смена пароля</h3>
+            <input type="password" id="oldPassword" placeholder="Текущий пароль">
+            <input type="password" id="newPassword" placeholder="Новый пароль">
+            <button class="security-btn" id="changePasswordBtn">
+                Сменить пароль
+            </button>
+        </div>
+
+        <div class="security-section">
+            <h3>Двухфакторная защита (2FA)</h3>
+            <p id="twoFaStatus">Статус: выключена</p>
+            <button class="security-btn" id="toggle2faBtn">
+                Включить 2FA
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<!-- ===== SCRIPTS ===== -->
+<script src="js/skin.js"></script>
+<script src="js/profile.js"></script>
+<script src="js/security.js"></script>
+
+</body>
+</html>
